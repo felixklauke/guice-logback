@@ -52,6 +52,11 @@ public class LoggerInjector<T> implements MembersInjector<T> {
      */
     private Logger logger;
 
+    /**
+     * Create a new logger injector.
+     *
+     * @param targetField The field we want to inject in.
+     */
     LoggerInjector(Field targetField) {
         this.targetField = targetField;
         declaringClass = targetField.getDeclaringClass();
@@ -59,6 +64,9 @@ public class LoggerInjector<T> implements MembersInjector<T> {
         initLogger();
     }
 
+    /**
+     * Initialize the logger instance itself.
+     */
     private void initLogger() {
         logger = LoggerFactory.getLogger(declaringClass);
     }
