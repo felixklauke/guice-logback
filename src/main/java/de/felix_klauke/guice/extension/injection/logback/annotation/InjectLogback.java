@@ -33,6 +33,6 @@ import java.lang.annotation.Target;
  * @author Felix Klauke <fklauke@itemis.de>
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 public @interface InjectLogback {
 }
