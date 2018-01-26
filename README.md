@@ -23,4 +23,24 @@ In this case we will use logback as our logging framework.
 </dependency>
 ```
 
-# Example
+# Example / How To
+
+First you will have to install our module in your injector. You can put the module
+in the injector creation or install our module in your main module.
+
+```java
+Injector injector = Guice.createInjector(new MyCoolModule(), new LogbackModule());
+```
+
+```java
+@Override
+protected void configure() {
+    install(new LogbackModule);
+}
+```
+
+As soon as the module is installed you can use on any field:
+
+```java
+@InjectLogback private Logger logger;
+```
