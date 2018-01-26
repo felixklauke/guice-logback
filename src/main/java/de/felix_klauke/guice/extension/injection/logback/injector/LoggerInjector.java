@@ -57,7 +57,7 @@ public class LoggerInjector<T> implements MembersInjector<T> {
      *
      * @param targetField The field we want to inject in.
      */
-    LoggerInjector(Field targetField) {
+    public LoggerInjector(Field targetField) {
         this.targetField = targetField;
         declaringClass = targetField.getDeclaringClass();
 
