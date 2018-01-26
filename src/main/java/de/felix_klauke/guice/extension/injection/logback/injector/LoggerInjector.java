@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package de.felix_klauke.guice.extension.injection.logback.module.injector;
+package de.felix_klauke.guice.extension.injection.logback.injector;
 
 import com.google.inject.MembersInjector;
 import org.slf4j.Logger;
